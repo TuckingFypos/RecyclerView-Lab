@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/view2"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView2"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:src="@android:drawable/btn_default"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView2_1"
+        android:text="Title Text"
+        android:layout_toRightOf="@id/imageView2"
+        android:layout_alignBottom="@id/imageView2"
+        />
+    <TextView
+        android:id="@+id/textView2_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Description Text"
+        android:layout_below="@id/textView2_1"
+        android:layout_alignLeft="@id/textView2_1"
+        />
+    <CheckBox
+        android:id="@+id/checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/textView2_2"
+        android:layout_alignParentRight="true"
+        />
+</RelativeLayout>
