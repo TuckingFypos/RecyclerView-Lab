@@ -7,26 +7,26 @@ import java.util.*;
 /**
  * Created by TuckingFypos on 7/5/16.
  */
-public class CustomRecyclerViewAdapterTwo extends RecyclerView.Adapter<CustomViewHolderTwo> {
+public class CustomRecyclerViewAdapterOne extends RecyclerView.Adapter<CustomViewHolderOne> {
 
-    List<CustomClassTwo> mCustomObjectsList;
+    List<CustomClassOne> mCustomObjectsList;
 
-    public CustomRecyclerViewAdapterTwo(final List<CustomClassTwo> customObjectList){
+    public CustomRecyclerViewAdapterOne(final List<CustomClassOne> customObjectList){
         mCustomObjectsList = customObjectList;
     }
 
 
     @Override
-    public CustomViewHolderTwo onCreateViewHolder(ViewGroup parent, int viewType) {
-        View parentView = LayoutInflater.from(parent.getContext()).inflate(R.layout.second_layout, parent, false);
-        CustomViewHolderTwo viewHolder = new CustomViewHolderTwo(parentView);
+    public CustomViewHolderOne onCreateViewHolder(ViewGroup parent, int viewType) {
+        View parentView = LayoutInflater.from(parent.getContext()).inflate(R.layout.first_layout, parent, false);
+        CustomViewHolderOne viewHolder = new CustomViewHolderOne(parentView);
         return viewHolder;
     }
 
     @Override
-    public void onBindViewHolder(CustomViewHolderTwo holder, final int position) {
+    public void onBindViewHolder(CustomViewHolderOne holder, final int position) {
 
-        CustomClassTwo customObject = mCustomObjectsList.get(position);
+        CustomClassOne customObject = mCustomObjectsList.get(position);
         final String title = customObject.getmTitle();
         final String content = customObject.getmDescription();
 
@@ -46,4 +46,6 @@ public class CustomRecyclerViewAdapterTwo extends RecyclerView.Adapter<CustomVie
     public int getItemCount() {
         return mCustomObjectsList.size();
     }
+
+
 }
